@@ -39,11 +39,53 @@ public class PRODUCTSGENERATOR : MonoBehaviour
 
 
     }
-    private void JugardeNuevo()
+    public void JugardeNuevo()
     {
         // si tocan el boton reiniciar
         DineroDisponible = Random.Range(100, 1000);
         ProductosConPrecios.Clear();
         PreciosAleatorios();
     }
+
+    public void btnAlcanzaJusto()
+    {
+        if (DineroDisponible == precio1 + precio2)
+        {
+            Debug.Log("Ganaste");
+            // abrir panel por si quiere seguir jugando o no, con el respectivo mensaje
+        }
+        else
+        {
+            Debug.Log("Perdiste");
+            // abrir panel por si quiere seguir jugando o no, con el respectivo mensaje
+        }
+    }
+
+    public void btnAlcanza()
+    {
+        if (DineroDisponible > precio1 + precio2)
+        {
+            Debug.Log("Ganaste");
+            // abrir panel por si quiere seguir jugando o no, con el respectivo mensaje
+        }
+        else
+        {
+            Debug.Log("Perdiste");
+            // abrir panel por si quiere seguir jugando o no, con el respectivo mensaje
+        }
+    }
+    public void btnNoAlcanza()
+    {
+        if (DineroDisponible < precio1 + precio2)
+        {
+            Debug.Log("Ganaste");
+            // abrir panel por si quiere seguir jugando o no, con el respectivo mensaje
+        }
+        else
+        {
+            Debug.Log("Perdiste");
+             // abrir panel por si quiere seguir jugando o no, con el respectivo mensaje
+        }
+    }
+
 }
