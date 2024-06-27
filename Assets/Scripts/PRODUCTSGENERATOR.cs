@@ -1,11 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PRODUCTSGENERATOR : MonoBehaviour
 {
     public GameObject [] productosDerecha;
     public GameObject[] productosIzquierda;
+
+    public Text txtPrecio1;
+    public Text txtPrecio2;
+    public Text txtPlata;
+
     int DineroDisponible;
     int precio1;
     int precio2;
@@ -17,6 +23,7 @@ public class PRODUCTSGENERATOR : MonoBehaviour
       void Start()
     {
         DineroDisponible = Random.Range(100, 1000);
+        txtPlata.text = "$" + DineroDisponible.ToString();
         PreciosAleatorios();
      }
 
@@ -41,6 +48,8 @@ public class PRODUCTSGENERATOR : MonoBehaviour
         precio1 = Random.Range(100, 500);
         precio2 = Random.Range(100, 500);
 
+        txtPrecio1.text = "$" + (precio1).ToString ();
+        txtPrecio2.text = "$" + (precio2).ToString();
 
         ProductosConPrecios.Add (precio1);
         ProductosConPrecios.Add(precio2);
@@ -51,6 +60,7 @@ public class PRODUCTSGENERATOR : MonoBehaviour
     {
         // si tocan el boton reiniciar
         DineroDisponible = Random.Range(100, 1000);
+        txtPlata.text = DineroDisponible.ToString();
         ProductosConPrecios.Clear();
         PreciosAleatorios();
     }

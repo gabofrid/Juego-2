@@ -2679,6 +2679,9 @@ MonoBehaviour:
   - {fileID: 49374761}
   - {fileID: 158105264}
   - {fileID: 1504770279}
+  txtPrecio1: {fileID: 558040567}
+  txtPrecio2: {fileID: 1806739346}
+  txtPlata: {fileID: 160341626}
 --- !u!4 &917049816
 Transform:
   m_ObjectHideFlags: 0
@@ -5683,6 +5686,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dzwonik_Mia_48240399 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5709594215572876550, guid: fe8fcce5bc1108742bf6a5765accd7e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5709594215573303590, guid: fe8fcce5bc1108742bf6a5765accd7e9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5871,6 +5879,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Dzwonik_Mia_48240399
+      objectReference: {fileID: 0}
+    - target: {fileID: 5709594215572876550, guid: fe8fcce5bc1108742bf6a5765accd7e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5709594215573303590, guid: fe8fcce5bc1108742bf6a5765accd7e9,
         type: 3}
