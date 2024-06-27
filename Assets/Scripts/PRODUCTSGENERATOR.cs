@@ -11,6 +11,10 @@ public class PRODUCTSGENERATOR : MonoBehaviour
     public Text txtPrecio1;
     public Text txtPrecio2;
     public Text txtPlata;
+    public Text txtPerdiste;
+    public Text txtGanaste;
+    public Text txtPlayAgain;
+
 
     int DineroDisponible;
     int precio1;
@@ -25,7 +29,10 @@ public class PRODUCTSGENERATOR : MonoBehaviour
         DineroDisponible = Random.Range(100, 1000);
         txtPlata.text = "$" + DineroDisponible.ToString();
         PreciosAleatorios();
-     }
+        txtPerdiste.text = "";
+        txtGanaste.text = "";
+        txtPlayAgain.text = "Reiniciar el desafío";
+    }
 
     // Update is called once per frame
     void Update()
@@ -63,6 +70,11 @@ public class PRODUCTSGENERATOR : MonoBehaviour
         txtPlata.text = DineroDisponible.ToString();
         ProductosConPrecios.Clear();
         PreciosAleatorios();
+        txtGanaste.text = "";
+        txtPerdiste.text = "";
+        txtPlayAgain.text = "Reiniciar el desafío";
+
+
     }
 
     public void btnAlcanzaJusto1()
@@ -71,11 +83,18 @@ public class PRODUCTSGENERATOR : MonoBehaviour
         if (DineroDisponible == precio1 + precio2)
         {
             Debug.Log("Ganaste");
+            txtPerdiste.text = "";
+            txtGanaste.text = "¡GANASTE!";
+            txtPlayAgain.text = "Reiniciar el desafío";
+
             // abrir panel por si quiere seguir jugando o no, con el respectivo mensaje
         }
         else
         {
             Debug.Log("Perdiste");
+            txtPerdiste.text = "PERDISTE:(";
+            txtGanaste.text = "";
+            txtPlayAgain.text = "Volver a intentarlo";
             // abrir panel por si quiere seguir jugando o no, con el respectivo mensaje
         }
     }
@@ -85,11 +104,17 @@ public class PRODUCTSGENERATOR : MonoBehaviour
         if (DineroDisponible > precio1 + precio2)
         {
             Debug.Log("Ganaste");
+            txtPerdiste.text = "";
+            txtGanaste.text = "¡GANASTE!";
+            txtPlayAgain.text = "Reiniciar el desafío";
             // abrir panel por si quiere seguir jugando o no, con el respectivo mensaje
         }
         else
         {
             Debug.Log("Perdiste");
+            txtPerdiste.text = "PERDISTE:(";
+            txtGanaste.text = "";
+            txtPlayAgain.text = "Volver a intentarlo";
             // abrir panel por si quiere seguir jugando o no, con el respectivo mensaje
         }
     }
@@ -98,12 +123,18 @@ public class PRODUCTSGENERATOR : MonoBehaviour
         if (DineroDisponible < precio1 + precio2)
         {
             Debug.Log("Ganaste");
+            txtPerdiste.text = "";
+            txtGanaste.text = "¡GANASTE!";
+            txtPlayAgain.text = "Reiniciar el desafío";
             // abrir panel por si quiere seguir jugando o no, con el respectivo mensaje
         }
         else
         {
             Debug.Log("Perdiste");
-             // abrir panel por si quiere seguir jugando o no, con el respectivo mensaje
+            txtPerdiste.text = "PERDISTE:(";
+            txtGanaste.text = "";
+            txtPlayAgain.text = "Volver a intentarlo";
+            // abrir panel por si quiere seguir jugando o no, con el respectivo mensaje
         }
     }
 
