@@ -9,6 +9,9 @@ public class PRODUCTSGENERATOR : MonoBehaviour
     int precio1;
     int precio2;
 
+    int Index1;
+    int Index2;
+
     List<int> ProductosConPrecios = new List<int>();
       void Start()
     {
@@ -24,14 +27,18 @@ public class PRODUCTSGENERATOR : MonoBehaviour
 
     private void PreciosAleatorios()
     {
+        DeactivateAll();
+        ActiveProducto();
         int index1 = Random.Range(0, productos.Length);     // metodo para agarrar dos objetos randoms entre los productos
         int index2 = Random.Range(0, productos.Length -1);
+        Index1 = index1;
+        Index2 = index2;
         if (index2 == index1)   // para ver que no agarre el mismo objeto
         {
             index2++;
         }
-        precio1 = Random.Range(100, 1000);
-        precio2 = Random.Range(100, 1000);
+        precio1 = Random.Range(100, 500);
+        precio2 = Random.Range(100, 500);
 
 
         ProductosConPrecios.Add (precio1);
@@ -89,4 +96,17 @@ public class PRODUCTSGENERATOR : MonoBehaviour
         }
     }
 
+    private void DeactivateAll()
+    {
+        for (int i = 0; i < productos.Length; i++)
+        {
+            productos[i].SetActive(false);
+        }
+    }
+
+    private void ActiveProducto()
+    {
+        productos[Index1].SetActive(true);
+        productos[Index2].SetActive(true);
+    }
 }
