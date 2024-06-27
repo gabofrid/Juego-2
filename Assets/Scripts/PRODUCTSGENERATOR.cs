@@ -5,11 +5,6 @@ using UnityEngine;
 public class PRODUCTSGENERATOR : MonoBehaviour
 {
     public GameObject [] productos;
-    public GameObject btnAlcanza;
-    public GameObject btnNoAlcanza;
-    public GameObject btnAlcanzaJusto;
-    public GameObject btnPlayAgain;
-
     int DineroDisponible;
     int precio1;
     int precio2;
