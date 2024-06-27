@@ -5,6 +5,11 @@ using UnityEngine;
 public class PRODUCTSGENERATOR : MonoBehaviour
 {
     public GameObject [] productos;
+    public GameObject btnAlcanza;
+    public GameObject btnNoAlcanza;
+    public GameObject btnAlcanzaJusto;
+    public GameObject btnPlayAgain;
+
     int DineroDisponible;
     int precio1;
     int precio2;
@@ -39,7 +44,7 @@ public class PRODUCTSGENERATOR : MonoBehaviour
 
 
     }
-    public void JugardeNuevo()
+    public void btnPlayAgain1()
     {
         // si tocan el boton reiniciar
         DineroDisponible = Random.Range(100, 1000);
@@ -47,8 +52,9 @@ public class PRODUCTSGENERATOR : MonoBehaviour
         PreciosAleatorios();
     }
 
-    public void btnAlcanzaJusto()
+    public void btnAlcanzaJusto1()
     {
+
         if (DineroDisponible == precio1 + precio2)
         {
             Debug.Log("Ganaste");
@@ -61,7 +67,7 @@ public class PRODUCTSGENERATOR : MonoBehaviour
         }
     }
 
-    public void btnAlcanza()
+    public void btnAlcanza1()
     {
         if (DineroDisponible > precio1 + precio2)
         {
@@ -74,7 +80,7 @@ public class PRODUCTSGENERATOR : MonoBehaviour
             // abrir panel por si quiere seguir jugando o no, con el respectivo mensaje
         }
     }
-    public void btnNoAlcanza()
+    public void btnNoAlcanza1()
     {
         if (DineroDisponible < precio1 + precio2)
         {
