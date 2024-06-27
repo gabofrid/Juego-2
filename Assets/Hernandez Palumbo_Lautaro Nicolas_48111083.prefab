@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4383553104788698424}
   - component: {fileID: 4383553104785306904}
   - component: {fileID: 4383553104786274264}
+  - component: {fileID: 114846095364166734}
   m_Layer: 0
   m_Name: Hernandez Palumbo_Lautaro Nicolas_48111083
   m_TagString: Untagged
@@ -77,3 +78,15 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &114846095364166734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4383553104788465944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e710039c0dd3b8a4e88c6cf05391d8c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

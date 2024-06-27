@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6299936646928040131}
   - component: {fileID: 6299936646928842979}
   - component: {fileID: 6299936646929941027}
+  - component: {fileID: 114481279103474916}
   m_Layer: 0
   m_Name: Schulklapper_Miriam Iael_48590054
   m_TagString: Untagged
@@ -77,3 +78,15 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &114481279103474916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6299936646927949027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e710039c0dd3b8a4e88c6cf05391d8c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
