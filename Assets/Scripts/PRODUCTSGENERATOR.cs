@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PRODUCTSGENERATOR : MonoBehaviour
 {
-    public GameObject [] productos;
+    public GameObject [] productosDerecha;
+    public GameObject[] productosIzquierda;
     int DineroDisponible;
     int precio1;
     int precio2;
@@ -29,8 +30,8 @@ public class PRODUCTSGENERATOR : MonoBehaviour
     {
         DeactivateAll();
         ActiveProducto();
-        int index1 = Random.Range(0, productos.Length);     // metodo para agarrar dos objetos randoms entre los productos
-        int index2 = Random.Range(0, productos.Length -1);
+        int index1 = Random.Range(0, productosDerecha.Length);     // metodo para agarrar dos objetos randoms entre los productos
+        int index2 = Random.Range(0, productosIzquierda.Length -1);
         Index1 = index1;
         Index2 = index2;
         if (index2 == index1)   // para ver que no agarre el mismo objeto
@@ -98,15 +99,22 @@ public class PRODUCTSGENERATOR : MonoBehaviour
 
     private void DeactivateAll()
     {
-        for (int i = 0; i < productos.Length; i++)
+        for (int i = 0; i < productosIzquierda.Length; i++)
         {
-            productos[i].SetActive(false);
+            productosIzquierda[i].SetActive(false);
+            productosIzquierda[i].SetActive(false);
+        }
+
+        for (int i = 0; i < productosDerecha.Length; i++)
+        {
+            productosDerecha[i].SetActive(false);
+            productosDerecha[i].SetActive(false);
         }
     }
 
     private void ActiveProducto()
     {
-        productos[Index1].SetActive(true);
-        productos[Index2].SetActive(true);
+        productosDerecha[Index1].SetActive(true);
+        productosIzquierda[Index2].SetActive(true);
     }
 }
